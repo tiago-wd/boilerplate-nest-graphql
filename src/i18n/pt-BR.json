@@ -1,0 +1,13 @@
+{
+	"created_user": "Usuário criado com sucesso",
+	"updated_user": "Usuário atualizado com sucesso",
+	"deleted_user": "Usuário deletado com sucesso",
+	"unique_email_required": "Email já cadastrado",
+	"user_already_exist": "Usuário já cadastrado",
+	"field_required": "Campo obrigatório",
+	"user_not_found": "Usuário não encontrado",
+	"invalid_password": "Senha inválida",
+	"created_bill": "Conta criada com sucesso",
+	"updated_bill": "Conta atualizada com sucesso",
+	"deleted_bill": "Conta deletada com sucesso"
+}

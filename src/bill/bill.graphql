@@ -1,0 +1,43 @@
+type ResponseBill {
+  code: Int
+  message: String
+  data: Bill
+}
+
+type ResponseBills {
+  code: Int
+  message: String
+  data: MonthBills
+}
+
+type MonthBills {
+  total: Int
+  list: [Bill]
+}
+
+type Bill {
+  id: Int 
+  name: String
+  user: User
+}
+
+type Query {
+  getBill(id: Int!): ResponseBill
+  getAllDayBills: ResponseBills
+  getAllMonthBills: ResponseBills
+}
+
+type Mutation {
+  createBill(createBillInput: CreateBillInput): ResponseBill
+  updateBill(updateBillInput: UpdateBillInput): Response
+  deleteBill(id: Int!): Response
+}
+
+input CreateBillInput {
+  name: String!
+}
+
+input UpdateBillInput {
+  id: Int!
+  name: String
+}

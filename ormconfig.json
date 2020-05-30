@@ -1,0 +1,25 @@
+{
+  "type": "postgres",
+  "host": "postgres",
+  "port": 5432,
+  "username": "pgadmin",
+  "password": "password",
+  "database": "bill_local",
+  "entities": [
+    "src/**/*.entity.ts",
+    "dist/**/*.entity.js"
+  ],
+  "migrations": [
+    "migration/*{.ts,.js}"
+  ],
+  "cli": {
+    "migrationsDir": "migration"
+  },
+  "synchronize": false,
+  "logging": [
+    "error",
+    "warn",
+    "log"
+  ],
+  "logger": "file"
+}

@@ -1,0 +1,44 @@
+type Response {
+  code: Int
+  message: String
+}
+
+type ResponseUser {
+  code: Int
+  message: String
+  data: User
+}
+
+type ResponseToken {
+  token: String
+  user: User
+}
+
+type User {
+  id: Int
+  name: String
+  email: String
+  device_id: String
+}
+
+type Query {
+  me: User
+}
+
+type Mutation {
+  updateUser(updateUserInput: UpdateUserInput): Response
+  register(registerInput: RegisterInput): ResponseToken
+  login(email: String!, password: String!, device_id: String): ResponseToken
+}
+
+input RegisterInput {
+  name: String!
+  email: String!
+  password: String!
+  device_id: String!
+}
+
+input UpdateUserInput {
+  name: String
+  email: String
+}
